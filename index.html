@@ -5,10 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EaglercraftX 1.8 u27</title>
 <style>
-    @font-face {
-        font-family: "Minecraft";
-        src: url('https://get.fontspace.co/download/font/Bmg3/YzZmODk4Y2EzMzc3NGM2MDk4OWQxNDRhZDhlNTQ2ZjAub3Rm/MinecraftRegular-Bmg3.otf');
-    }
+    @import url('https://fonts.googleapis.com/css2?family=Minecraft&display=swap');
 
     body {
         margin: 0;
@@ -16,11 +13,8 @@
         font-family: "Minecraft", sans-serif; /* Minecraft-like font */
         overflow: hidden; /* to prevent scrollbars */
         background-color: #000; /* black background */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
         color: #fff;
+        text-align: center;
     }
     .snowflakes {
         position: fixed;
@@ -39,10 +33,6 @@
         user-select: none;
         animation: snowfall linear infinite;
     }
-    .button-container {
-        text-align: center;
-        position: relative;
-    }
     .button {
         display: inline-block;
         padding: 20px 40px;
@@ -59,20 +49,15 @@
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
     .button-text {
-        position: absolute;
-        top: -50px; /* adjusted */
-        left: 50%;
-        transform: translateX(-50%);
         font-size: 14px;
-        margin: 0; /* remove indentation */
-        font-family: "Minecraft", sans-serif;
+        margin-top: 20px;
     }
     .snow-floor {
         position: fixed;
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 50px; /* increased height */
+        height: 20px; /* reduced height */
         background-image: repeating-linear-gradient(90deg, transparent, transparent 10px, #fff 10px, #fff 20px); /* Minecraft-like pattern */
         pointer-events: none;
         z-index: -1;
@@ -102,7 +87,7 @@
             snowflake.style.animationDuration = Math.random() * 5 + 3 + "s";
             snowflake.style.opacity = Math.random();
             snowflake.style.fontSize = Math.random() * 20 + 10 + "px";
-            document.querySelector(".snowflakes").appendChild(snowflake);
+            document.body.appendChild(snowflake);
         }
     </script>
 </body>
