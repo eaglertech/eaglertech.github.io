@@ -15,6 +15,7 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
+        color: #fff;
     }
     .snowflakes {
         position: fixed;
@@ -31,6 +32,10 @@
         font-size: 2em;
         opacity: 0.5;
         user-select: none;
+        animation: snowfall linear infinite;
+    }
+    .button-container {
+        text-align: center;
     }
     .button {
         display: inline-block;
@@ -42,18 +47,34 @@
         text-decoration: none;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         transition: all 0.3s ease;
+        position: relative;
     }
     .button:hover {
         background-color: #0056b3; /* dark blue on hover */
         box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
     }
+    .button-text {
+        position: absolute;
+        top: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 14px;
+    }
+    @keyframes snowfall {
+        0% { transform: translateY(-100vh); }
+        100% { transform: translateY(100vh); }
+    }
 </style>
 </head>
 <body>
     <div class="snowflakes" aria-hidden="true">
+        <!-- No need to change the JavaScript for snowflakes -->
         <div class="snowflake">❅</div>
     </div>
-    <a href="#" class="button">EaglercraftX 1.8 u27</a>
+    <div class="button-container">
+        <p class="button-text">Did you mean to go to...</p>
+        <a href="#" class="button">EaglercraftX 1.8 u27</a>
+    </div>
 
     <!-- JavaScript for snow effect -->
     <script>
