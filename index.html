@@ -59,7 +59,8 @@
         left: 50%;
         transform: translateX(-50%);
         font-size: 14px;
-        color: #fff;
+        font-family: "Minecraft", sans-serif;
+        margin: 0; /* remove indentation */
     }
     .snow-floor {
         position: fixed;
@@ -67,7 +68,7 @@
         left: 0;
         width: 100%;
         height: 50px; /* increased height */
-        background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, #fff 10px, #fff 20px); /* Minecraft-like pattern */
+        background-image: repeating-linear-gradient(90deg, transparent, transparent 10px, #fff 10px, #fff 20px); /* Minecraft-like pattern */
         pointer-events: none;
         z-index: -1;
     }
@@ -78,10 +79,7 @@
 </style>
 </head>
 <body>
-    <div class="snowflakes" aria-hidden="true">
-        <!-- No need to change the JavaScript for snowflakes -->
-        <div class="snowflake">❅</div>
-    </div>
+    <div class="snowflakes" aria-hidden="true"></div>
     <div class="button-container">
         <p class="button-text">Did you mean to go to...</p>
         <a href="#" class="button">EaglercraftX 1.8 u27</a>
